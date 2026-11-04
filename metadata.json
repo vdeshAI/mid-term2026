@@ -1,0 +1,6 @@
+{
+  "name": "US Midterm Election 2026 Live Map",
+  "description": "Live real-time US Midterm Election (November 3, 2026) results with interactive SVG map, automatic race call highlights, historical flip and swing analysis, candidate vote shares, and Senate & House balance of power.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

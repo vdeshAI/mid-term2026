@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Custom glowing pulse for called races on the map */
+@keyframes race-call-pulse {
+  0% {
+    stroke-opacity: 1;
+    stroke-width: 3.5px;
+    filter: drop-shadow(0 0 12px rgba(234, 179, 8, 0.9));
+  }
+  50% {
+    stroke-opacity: 0.7;
+    stroke-width: 4.5px;
+    filter: drop-shadow(0 0 20px rgba(234, 179, 8, 1));
+  }
+  100% {
+    stroke-opacity: 1;
+    stroke-width: 3.5px;
+    filter: drop-shadow(0 0 12px rgba(234, 179, 8, 0.9));
+  }
+}
+
+.animate-race-call {
+  animation: race-call-pulse 1.8s infinite ease-in-out;
+}
+
+/* Custom scrollbar for dense data panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(71, 85, 105, 0.6);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.9);
+}
